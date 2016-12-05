@@ -1,1 +1,216 @@
-<h1>Hello Pages!</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Scripts -->
+  <script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+
+	<!-- Stylesheets -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet"/>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway:700" rel="stylesheet">
+
+  <title>MeterFeeder Redesign</title>
+
+</head>
+
+<body>
+<div class="container content">
+	<div id="header">
+		<img class="mid" src="images/logo.png" />
+		<h1>MeterFeeder Redesign</h1>
+		<p class="mini">presentation by Will Groves, Noah Picard, and Jared Siskin</p>
+		<a href="https://projects.invisionapp.com/share/A39870YZV#/screens/203024665" target=_> 
+			<div class="button">
+				Try It Out!
+			</div>
+		</a>
+	</div>
+	<div class="section">
+		<h2>Introduction</h2>
+		<p>Parking technology is outdated. </p>
+		<p> 
+		<a href="https://www.meterfeeder.com/">MeterFeeder</a> is a startup trying to fix this.  They enable consumers to pay for parking via their mobile phone, which eliminates the need to carry change.  This also helps cities, as they can gather data, and collect coins less often. 
+		</p> 
+		<p>
+		We found the existing MeterFeeder app did not take advantage of the opportunities provided by a mobile phone, and stuck too closely to the design and function of existing meters.  We wanted to fix this.
+		</p>
+		<p>
+		Below are some screenshots.
+		</p>
+	</div>
+
+	<div class="section">
+		<h2>Original App</h2>
+		<p>In the original MeterFeeder design, parking is selected through a search of the state and city to determine local rates. Once this is selected, users click “+” to add to the time in hour increments, a method similar to adding quarters into a machine.  The user can at any time add more time to the meter, similar to going back to the meter and adding more quarters, but with the convenience of having a meter in your pocket.
+			</p><p>
+		There are some falws with this interface: The search mechanism relies on knowing the name of your parking area, and does not warn you if you are outside the area you are paying for. The “pay for parking page” has a couple of confusing elements: it’s unclear if the expiration time is the time it will expire for the user, or the max time limit for the meter itself. Finally, there is no clear way of getting assistance with the app. These, among others, were issues we set out the address.</p>
+		<div class="row image-row">
+			<div class="col-md-4 col-sm-6">
+				<img class="tile-image" src="images/old/OldSearch.png" />
+			</div>
+			<div class="col-md-4 col-sm-6">
+				<img class="tile-image" src="images/old/OldNeighborhood.png" />
+			</div>
+			<div class="col-md-4 col-sm-6">
+				<img class="tile-image" src="images/old/OldPayment.png" />
+			</div>
+			<div class="col-md-4 col-sm-6">
+				<img class="tile-image" src="images/old/OldPayment1.png" />
+			</div>
+			<div class="col-md-4 col-sm-6">
+				<img class="tile-image" src="images/old/OldMenu.png" />
+			</div>
+			<div class="col-md-4 col-sm-6">
+				<img class="tile-image" src="images/old/OldOptions.png" />
+			</div>
+		</div>
+	</div>
+
+	<div class="section">
+		<h2>Our Redesign</h2>
+
+		<p> 
+		Our strategy to further improve the existing system was to throw out the payment incrementation model. In our new design, the app allows the user to park in the spot for as long as desired, up to the time limit of the area. Once the user leaves their spot, the app charges the credit card for how long car was parked. There are numerous benefits to this interface. For starters, the user doesn’t pay for any extra time; the app only charges for time parked. Additionally, the user doesn’t have to worry about the meter expiring. There is no running back to the meter to add more time; the app has the car covered up to the meter’s expiration time, if there is one at all.
+
+		</p> 
+		<p>
+We designed the app with this strategy in mind. It’s main focus is helping the user find a spot, and then letting the user decide when to stop the parking process. In this scenario, the users never have to think about how much they need to pay or how long they are going to be at the meter for; instead they can focus on the tasks they are going to accomplish while parked.
+		</p>
+		<h2>Redesign Screenshots</h2>
+
+		<div class="row image-row">
+			<div class="col-md-4 col-sm-6">
+				<img class="tile-image" src="images/new/NewMap.png" />
+			</div>
+			<div class="col-md-6 col-sm-6">
+				<h3>Intro/Map</h3>
+				<p>The homepage of the app brings up your current location on a map as opposed to a search-bar. This accomplishes two objectives. One advantage is it can help users find parking. Instead of searching for individual addresses, which requires knowledge of the city, the user can browse  the nearby streets in green which they can actually park in. Another advantage is the user can initiate the parking process directly from the homepage, without having to search or select their parking location from a list.  In an app with this use case, speed and ease of use is very important.</p>
+			</div>
+		</div>
+		<div class="row image-row">
+			<div class="col-md-4 col-sm-6">
+				<img class="tile-image" src="images/new/NewBeginParking.png" />
+			</div>
+			<div class="col-md-6 col-sm-6">
+				<h3>Begin Parking</h3>
+				<p>Once the user click the parking arrow, a confirmation page appears. This page gives the user the peace of mind to be sure that their parking is successful. A red car appears on the selected parking location, signaling to the user exactly where he or she parked. On the bottom, their default car and payment information is loaded, allowing them to quickly change their information or pay in one click.
+				</p><p>
+				What is important to note is that the user doesn’t enter how long they think they’re staying, or pay ahead of time; we use a completely different mental model than adding quarters to a meter.  </p>
+			</div>
+		</div>
+		<div class="row image-row">
+			<div class="col-md-4 col-sm-6">
+				<img class="tile-image" src="images/new/NewWhileParking.png" />
+			</div>
+			<div class="col-md-6 col-sm-6">
+				<h3>While Parking</h3>
+				<p>The page display when the user is parked. This page highlights the major difference between our system and the existing MeterFeeder system.  
+					</p><p>
+					On the top of the page is the vital information a user would want: how much time left they have in a spot before it expires (if it a spot that does). At the bottom, they can see an increasing clock and charge for the time they have spent in the spot already. The map is centered on the car, which intuitively allows the user to remember where they parked. The user can end their parking by simply pressing the “stop parking” button, and it as this point we charge the customer.  A help icon is available if the user has any questions or issues.</p>
+			</div>
+		</div>
+		<div class="row image-row">
+			<div class="col-md-4 col-sm-6">
+				<img class="tile-image" src="images/new/NewFinishParking.png" />
+			</div>
+			<div class="col-md-6 col-sm-6">
+				<h3>Finished Parking</h3>
+				<p>A confirmation page pops up once the user stops parking. This page acts as a buffer to prevent someone accidentally clicking the “stop parking” button. It also displays a summary of the parking transaction in a clear and concise format. The user can see exactly how long the car was parked for and what the bill was, as well as the car and payment information used. Pressing confirm completes the transaction and brings the user back to the home page. </p>
+			</div>
+		</div>
+
+	<h2>Other Screenshots</h2>
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators 
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+    <li data-target="#myCarousel" data-slide-to="3"></li>
+  </ol>-->
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="images/new/gallery/NewForgotToStop.png" alt="Chania">
+      <div class="carousel-caption">
+        <h3>Forgot To Stop?</h3>
+        <p>If a user forgets to end parking and were overcharged, they can submit this information to MeterFeeder.</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="images/new/gallery/NewHelp.png" alt="Chania">
+      <div class="carousel-caption">
+        <h3>Help</h3>
+        <p>Help is accessible when during parking, from the sidebar, or from the history page.  It allows a user access to quickly get help and answers to issues.</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="images/new/gallery/NewMenu.png" alt="Flower">
+      <div class="carousel-caption">
+        <h3>New Menu</h3>
+        <p>A simple sidebar that the user can quickly navigate between pages.</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="images/new/gallery/NewHistory.png" alt="Flower">
+      <div class="carousel-caption">
+        <h3>History</h3>
+        <p>A list of parking transactions. The user can email the receipt of a transaction or click the “?” icon to get more information and/or dispute it.</p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="images/new/gallery/NewMyCars.png" alt="Flower">
+      <div class="carousel-caption">
+        <h3>My Cars</h3>
+        <p>A list of cars you have registered, and the option to add a new one or edit an existing one.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+	</div>
+
+
+	<div class="section" style="text-align:center; margin-bottom: 5em;">
+		<h2>And that's it!</h2>
+		<p>Thanks so much for checking this design out! We'd love to hear your feedback.</p>
+		
+	
+		<p>
+		You can also play with an interactive prototype here:
+	</p>
+		<a href="https://projects.invisionapp.com/share/A39870YZV#/screens/203024665" target=_> 
+			<div class="button">
+				Try It Out!
+			</div>
+		</a>
+		
+	</div>
+
+
+	</div>
+
+</div>
+
+</body>
+</html>
